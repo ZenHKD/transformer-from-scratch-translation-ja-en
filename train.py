@@ -220,7 +220,7 @@ def get_or_build_tokenizer(config, ds, lang):
     if not Path.exists(tokenizer_path):
         print(f"Building WordPiece tokenizer for {lang}...")
         tokenizer = Tokenizer(WordPiece(unk_token='[UNK]'))
-        trainer = WordPieceTrainer(special_tokens=["[UNK]", "[PAD]", "[SOS]", "[EOS]"], vocab_size=64000)
+        trainer = WordPieceTrainer(special_tokens=["[UNK]", "[PAD]", "[SOS]", "[EOS]"], vocab_size=32000)
         tokenizer.train_from_iterator(get_all_sentences(ds, lang), trainer = trainer)
         tokenizer.save(str(tokenizer_path))
     else:

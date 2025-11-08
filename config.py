@@ -8,13 +8,6 @@ def get_config():
         "lr": 1e-4,
         "seq_len": 80,
         "d_model": 512,
-        # "N": 6,          # Number of blocks
-        # "h": 8,          # Number of heads
-        # "num_kv_heads": 2, # Examples for GQA
-        # "dropout": 0.1,
-        # "d_ff": 2048,
-        # "num_experts": 4, # MoE
-        # "top_k": 2,       # Number of experts be activated for each token
         "lang_src": "ja",
         "lang_tgt": "en",
         "model_folder": "weights",
